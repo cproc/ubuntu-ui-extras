@@ -28,12 +28,12 @@
 void Components::registerTypes(const char *uri)
 {
     // Example component
-    qmlRegisterType<ExampleModel>(uri, 0, 2, "ExampleModel");
+//    qmlRegisterType<ExampleModel>(uri, 0, 2, "ExampleModel");
 
     // PhotoEditor component
-    qmlRegisterType<PhotoData>(uri, 0, 2, "PhotoData");
-    qmlRegisterSingletonType<FileUtils>(uri, 0, 2, "FileUtils",
-                                        exportFileUtilsSingleton);
+//    qmlRegisterType<PhotoData>(uri, 0, 2, "PhotoData");
+//    qmlRegisterSingletonType<FileUtils>(uri, 0, 2, "FileUtils",
+//                                        exportFileUtilsSingleton);
 
     // TabsBar component
     qmlRegisterType<DragHelper>(uri, 0, 3, "DragHelper");
@@ -43,9 +43,9 @@ void Components::initializeEngine(QQmlEngine *engine, const char *uri)
 {
     QQmlExtensionPlugin::initializeEngine(engine, uri);
 
-    PhotoImageProvider* provider = new PhotoImageProvider();
-    engine->addImageProvider(PhotoImageProvider::PROVIDER_ID,
-                             provider);
+//    PhotoImageProvider* provider = new PhotoImageProvider();
+//    engine->addImageProvider(PhotoImageProvider::PROVIDER_ID,
+//                             provider);
 }
 
 QObject* Components::exportFileUtilsSingleton(QQmlEngine *engine,

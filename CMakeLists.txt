@@ -31,8 +31,8 @@ set (GETTEXT_PACKAGE "ubuntu-ui-extras")
 
 add_subdirectory(modules)
 
-if(ENABLE_TESTS)
-    enable_testing()
-    add_subdirectory(tests)
-endif()
+#if(ENABLE_TESTS)
+#    enable_testing()
+#    add_subdirectory(tests)
+#endif()
 add_subdirectory(po)

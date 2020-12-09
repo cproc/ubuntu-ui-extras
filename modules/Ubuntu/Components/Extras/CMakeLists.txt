@@ -11,7 +11,7 @@ foreach(qmlFile ${QML_FILES} Example.qml PhotoEditor.qml TabsBar.qml Example Pho
 endforeach(qmlFile)
 
 add_subdirectory(plugin)
-add_subdirectory(Example)
-add_subdirectory(PhotoEditor)
-add_subdirectory(Printers)
+#add_subdirectory(Example)
+#add_subdirectory(PhotoEditor)
+#add_subdirectory(Printers)
 add_subdirectory(TabsBar)

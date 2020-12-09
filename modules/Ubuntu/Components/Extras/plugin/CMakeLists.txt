@@ -1,5 +1,5 @@
 include(FindPkgConfig)
-pkg_check_modules(EXIV2 REQUIRED exiv2)             # photoeditor
+#pkg_check_modules(EXIV2 REQUIRED exiv2)             # photoeditor
 
 set(PLUGIN_SRC
     components.cpp
@@ -28,7 +28,7 @@ include_directories(
 )
 
 add_library(ubuntu-ui-extras-plugin SHARED ${PLUGIN_SRC} ${PLUGIN_HDRS}
-            ${EXAMPLE_PLUGIN_SRC} ${PHOTO_EDITOR_PLUGIN_SRC} ${TABS_BAR_PLUGIN_SRC})
+            ${TABS_BAR_PLUGIN_SRC})
 qt5_use_modules(ubuntu-ui-extras-plugin Core Qml Quick Xml Widgets)
 target_link_libraries(ubuntu-ui-extras-plugin
     ${EXIV2_LIBRARIES}

@@ -6,7 +6,7 @@ add_definitions(-DUBUNTUCOMPONENTSEXTRASPRINTERS_LIBRARY)
 
 include(FindCups)
 
-include_directories(${CMAKE_CURRENT_BINARY_DIR} ${CUPS_INCLUDE_DIR})
+#include_directories(${CMAKE_CURRENT_BINARY_DIR} ${CUPS_INCLUDE_DIR})
 
 find_package(Qt5Gui REQUIRED)
 find_package(Qt5PrintSupport REQUIRED)
@@ -15,7 +15,7 @@ find_package(Qt5DBus REQUIRED)
 find_package(Qt5Concurrent REQUIRED)
 
 if(NOT CUPS_FOUND)
-message(FATAL_ERROR "Could not find cups.")
+#message(FATAL_ERROR "Could not find cups.")
 endif()
 
 qt5_add_dbus_interface(
@@ -58,10 +58,9 @@ target_link_libraries(UbuntuComponentsExtrasPrintersQml
     Qt5::PrintSupport
     Qt5::Qml
     Qt5::Concurrent
-    ${CUPS_LIBRARIES}
 )
 
-find_package(QmlPlugins)
+#find_package(QmlPlugins)
 
 macro(add_plugin PLUGIN VERSION PATH)
     export_qmlfiles(${PLUGIN} ${PATH} DESTINATION ${QT_IMPORTS_DIR} ${ARGN})
